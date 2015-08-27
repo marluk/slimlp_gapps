@@ -184,6 +184,7 @@
         <!-- copy space.sh and fill in values -->
         <copy file="${app.dir}/extras/space.sh" todir="${work.dir}">
             <filterchain>
+                <replaceregex pattern="@version@" replace="${PRODUCT_VERSION_MAJOR}" flags="i"/>
                 <replaceregex pattern="@space_needed@" replace="${length.zero}" flags="i"/>
             </filterchain>
         </copy>
@@ -245,6 +246,7 @@
         <!-- copy space.sh and fill in values -->
         <copy file="${app.dir}/extras/space.sh" todir="${work.dir}">
             <filterchain>
+                <replaceregex pattern="@version@" replace="${PRODUCT_VERSION_MAJOR}" flags="i"/>
                 <replaceregex pattern="@space_needed@" replace="${length.mini}" flags="i"/>
             </filterchain>
         </copy>
